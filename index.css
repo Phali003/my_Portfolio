@@ -11,7 +11,6 @@ body {
 html {
   scroll-behavior: smooth;
 }
-/* custom scroll bar */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -24,7 +23,6 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-/* all similar content styling codes */
 section {
   padding: 100px 0;
 }
@@ -79,7 +77,6 @@ section .title::after {
   background: #fff;
   transform: translateX(-50%);
 }
-/* navbar styling */
 .navbar {
   position: fixed;
   width: 100%;
@@ -97,11 +94,13 @@ section .title::after {
   align-items: center;
   justify-content: space-between;
 }
+
 .navbar .logo a {
   color: #fff;
   font-size: 35px;
   font-weight: 600;
 }
+
 .navbar .logo a span {
   color: crimson;
   transition: all 0.3s ease;
@@ -127,7 +126,6 @@ section .title::after {
 .navbar.sticky .menu li a:hover {
   color: #fff;
 }
-/* menu btn styling */
 .menu-btn {
   color: #fff;
   font-size: 23px;
@@ -161,7 +159,9 @@ section .title::after {
 .scroll-up-btn:hover {
   filter: brightness(90%);
 }
-/* home section styling */
+.hire-me {
+  margin-left: 6em;
+}
 .home {
   display: flex;
   background: url("images/banner.jpg") no-repeat center;
@@ -211,7 +211,6 @@ section .title::after {
   color: crimson;
   background: none;
 }
-/* about section styling */
 .about .title::after {
   content: "who i am";
 }
@@ -254,7 +253,6 @@ section .title::after {
   color: crimson;
   background: none;
 }
-/* services section styling */
 .services,
 .teams {
   color: #fff;
@@ -300,7 +298,6 @@ section .title::after {
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
-/* skills section styling */
 .skills .title::after {
   content: "what i know";
 }
@@ -396,19 +393,16 @@ i {
   font-size: 7em;
   color: rgb(0, 195, 255);
 }
-
 .icon-names {
   font-size: medium;
   color: rgb(0, 195, 255);
 }
-
 .svg-images {
   display: flex;
   gap: 0.2em;
   align-items: center;
   font-size: 7rem;
 }
-
 .svg-container {
   text-align: center;
 }
@@ -417,7 +411,6 @@ i {
   color: rgb(0, 195, 255);
   font-weight: 600;
 }
-
 .ui-ux {
   width: 1.5em;
   height: 1.5em;
@@ -433,8 +426,51 @@ i {
   font-weight: 600;
   color: rgb(0, 195, 255);
 }
+.bars {
+  margin-left: 8em;
+}
+.projects {
+  font-family: "Lexend Giga", serif;
+  font-optical-sizing: auto;
+  color: rgb(21, 255, 0);
+}
 
-/* teams section styling */
+.ecommerce {
+  width: 30em;
+  height: 30em;
+  padding-left: 2em;
+  justify-content: space-between;
+  border-radius: 2rem;
+}
+.calc {
+  padding: 3em;
+  width: 30em;
+  height: 30em;
+  border-radius: 5em;
+  transition: ease-in-out 0.5s;
+  display: inline-block;
+}
+.calc:hover {
+  width: 33em;
+}
+.project-name {
+  color: #6aa5e9;
+  font-size: x-large;
+}
+.web-links {
+  color: red;
+  font-size: x-large;
+}
+.web-links:hover {
+  color: #c811ff;
+}
+.project-description {
+  font-family: "Lexend Giga", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  color: #36db27;
+}
+
 .teams .title::after {
   content: "who with me";
 }
@@ -496,7 +532,6 @@ i {
 .owl-dot:hover {
   background: crimson !important;
 }
-/* contact section styling */
 .contact .title::after {
   content: "get in touch";
 }
@@ -591,7 +626,6 @@ i {
   color: crimson;
   background: none;
 }
-/* footer section styling */
 footer {
   background: #111;
   padding: 15px 23px;
@@ -605,7 +639,45 @@ footer span a {
 footer span a:hover {
   text-decoration: underline;
 }
-/* responsive media query start */
+.bars {
+  margin-bottom: 20px;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.line {
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #6979ff;
+  border-radius: 5px;
+}
+.line.html::after {
+  width: 90%;
+}
+.line.css::after {
+  width: 60%;
+}
+.line.js::after {
+  width: 80%;
+}
+.line.react::after {
+  width: 60%;
+}
+.line.ui_ux::after {
+  width: 70%;
+}
 @media (max-width: 1104px) {
   .about .about-content .left img {
     height: 350px;
@@ -680,6 +752,24 @@ footer span a:hover {
     width: 100%;
     margin-bottom: 35px;
   }
+  .projects {
+    margin-left: 8em;
+  }
+  .contact {
+    margin-left: 8em;
+  }
+  .column right {
+    margin-left: 6em;
+  }
+  .column .bars {
+    margin-left: 5em;
+  }
+  .projects {
+    margin-left: 10em;
+  }
+  .project-description {
+    font-size: larger;
+  }
 }
 @media (max-width: 690px) {
   .max-width {
@@ -696,6 +786,40 @@ footer span a:hover {
   }
   .services .serv-content .card {
     width: 100%;
+    justify-self: center;
+  }
+  .column {
+    position: relative;
+  }
+  .column .text {
+    text-align: center;
+  }
+  .column p {
+    text-align: center;
+    margin-left: 6em;
+    justify-content: center;
+
+    display: flex;
+  }
+  .services {
+    margin-right: -12em;
+    width: fit-content;
+  }
+  .services .box {
+    width: 80vw;
+    text-align: center;
+    justify-content: center;
+    margin-left: 0em;
+  }
+  .projects {
+    padding-right: -15em;
+  }
+  .projects img {
+    width: 30em;
+    height: 30em;
+    align-items: center;
+    float: inline-end;
+    margin-left: 9em;
   }
 }
 @media (max-width: 500px) {
@@ -708,6 +832,10 @@ footer span a:hover {
   .about .about-content .right .text,
   .skills .skills-content .left .text {
     font-size: 19px;
+  }
+  .about {
+    margin-left: 3em;
+    display: inline-block;
   }
   .contact .right form .fields {
     flex-direction: column;
@@ -726,5 +854,16 @@ footer span a:hover {
     width: 35px;
     font-size: 23px;
     line-height: 38px;
+  }
+  .contact .contact-content,
+  .contact p {
+    display: inline-flex;
+    margin-left: -3em;
+  }
+  .carousel .owl-carousel {
+    margin-left: 8em;
+  }
+  .bars {
+    padding-right: 8em;
   }
 }
